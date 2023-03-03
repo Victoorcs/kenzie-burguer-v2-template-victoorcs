@@ -8,19 +8,16 @@ const ProductList = () => {
 
   return (
     <StyledProductList>
-      {product.map((produto) => {
-        console.log();
-        return (
-          <ProductCard
-            name={produto.name}
-            img={produto.img}
-            category={produto.category}
-            id={produto.id}
-            price={produto.price}
-            key={produto.id}
-          />
-        );
-      })}
+      {product.map((produto) => (
+        <ProductCard
+          name={produto.name}
+          img={produto.img}
+          category={produto.category}
+          id={produto.id}
+          price={produto.price}
+          key={produto.id}
+        />
+      ))}
     </StyledProductList>
   );
 };

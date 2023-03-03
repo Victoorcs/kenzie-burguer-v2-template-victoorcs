@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  FormEvent,
-  InputHTMLAttributes,
-  useEffect,
-  useState,
-} from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import {
   ICartContext,
   IDefautProviderProps,
@@ -12,7 +6,6 @@ import {
   IProductCart,
 } from './@types';
 import { api } from '../services/api';
-import ProductList from '../components/ProductList';
 
 export const CartContext = createContext({} as ICartContext);
 
@@ -71,7 +64,7 @@ export const CartProvider = ({ children }: IDefautProviderProps) => {
   const searchProduct = (event: any) => {
     event.preventDefault();
     const input: string = event.currentTarget.previousSibling?.value;
-    console.log(product);
+
     if (input === '') {
       loadProducts();
     } else
