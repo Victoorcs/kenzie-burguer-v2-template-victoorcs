@@ -15,9 +15,6 @@ export const CartProvider = ({ children }: IDefautProviderProps) => {
   const [search, setSearch] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    loadProducts();
-  }, []);
   async function loadProducts() {
     const token = localStorage.getItem('@TOKEN');
     try {
@@ -91,6 +88,7 @@ export const CartProvider = ({ children }: IDefautProviderProps) => {
         value,
         clearCart,
         searchProduct,
+        loadProducts,
       }}
     >
       {children}

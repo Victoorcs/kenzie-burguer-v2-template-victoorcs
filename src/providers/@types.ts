@@ -55,4 +55,5 @@ export interface ICartContext {
   value: number;
   clearCart(): void;
   searchProduct: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  loadProducts(): Promise<void>;
 }
